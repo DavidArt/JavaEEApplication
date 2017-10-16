@@ -1,6 +1,6 @@
-package ro.fortech;
+package ro.fortech.login;
 
-public class UserValidationService {
+public class LoginService {
 
 	public boolean isUserValid(String user, String password) {
 		if(user.equalsIgnoreCase("David") && password.equals("iggy"))
