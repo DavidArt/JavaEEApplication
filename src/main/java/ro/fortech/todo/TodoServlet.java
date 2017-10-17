@@ -29,5 +29,12 @@ public class TodoServlet extends HttpServlet {
 		todoService.addTodo(new Todo(todo));
 		response.sendRedirect("/todo.do");
 	}
+
+	@Override
+	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+	
+	
 	
 }
