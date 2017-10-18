@@ -32,7 +32,7 @@
 		</ul>
 
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/login.do">Login</a></li>
+			<li><a href="/logout.do">Logout</a></li>
 		</ul>
 
 	</nav>
@@ -43,7 +43,7 @@
 		Your Todos are
 		<ol>
 			<c:forEach items="${todos}" var="todo">
-				<li>${todo.name}<a href="/delete-todo.do?todo=${todo.name}">Delete</a></li>
+				<li>${todo.name}<a href="/delete-todo.do?todo=${todo.name}"> Delete</a></li>
 			</c:forEach>
 		</ol>
 
