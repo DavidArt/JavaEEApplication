@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Todos</title>
+<title>Todo's</title>
 <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
 	rel="stylesheet">
 
@@ -27,7 +27,7 @@
 
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="#">Home</a></li>
-			<li><a href="/todo.do">Todos</a></li>
+			<li><a href="/list-todos.do">Todo's</a></li>
 			<li><a href="http://www.fortech.ro">FORTECH</a></li>
 		</ul>
 
@@ -43,17 +43,16 @@
 		Your Todos are
 		<ol>
 			<c:forEach items="${todos}" var="todo">
-				<li>${todo.name}<a href="/delete-todo.do?todo=${todo.name}"> Delete</a></li>
+				<li>${todo.name}&nbsp;<a
+					href="/delete-todo.do?todo=${todo.name}">Delete</a></li>
 			</c:forEach>
 		</ol>
 
 		<p>
 			<font color="red">${errorMessage}</font>
 		</p>
-		<form method="POST" action="/add-todo.do">
-			New Todo : <input name="todo" type="text" /> <input name="add"
-				type="submit" />
-		</form>
+		<a
+					href="/add-todo.do">Add New Todo</a>
 	</div>
 
 	<footer class="footer">

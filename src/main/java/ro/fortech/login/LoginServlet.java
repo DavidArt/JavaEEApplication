@@ -1,7 +1,6 @@
 package ro.fortech.login;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,17 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ro.fortech.login.LoginService;
-import ro.fortech.todo.TodoService;
 
 @WebServlet(urlPatterns="/login.do")
 public class LoginServlet extends HttpServlet {
 	
 	private LoginService userValidationService = new LoginService();
-	private TodoService todoService = new TodoService();
 
-	/*
-	 * doGet method inherited from HttpServlet
-	 */
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request, response);
@@ -35,9 +29,9 @@ public class LoginServlet extends HttpServlet {
 		
 		if (isUserValid) {
 			request.getSession().setAttribute("name", name);
-			response.sendRedirect("/todo.do");
+			response.sendRedirect("/list-todos.do");
 		} else {
-			request.setAttribute("errorMessage", "Invalid Credentials !");
+			request.setAttribute("errorMessage", "Haha! Invalid Credentials! Try again.");
 			request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request, response);
 		}
 		
