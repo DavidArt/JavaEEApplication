@@ -1,9 +1,9 @@
 	<nav class="navbar navbar-default">
 
-		<a href="/" class="navbar-brand">Brand</a>
+		<a href="/" class="navbar-brand">Home</a>
 
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
+
 			<li><a href="/list-todos.do">Todo's</a></li>
 			<li><a href="http://www.fortech.ro">FORTECH</a></li>
 		</ul>

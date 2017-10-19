@@ -1,5 +1,5 @@
 <footer class="footer">
-	<div>footer content</div>
+	<div>- Java EE Application -</div>
 </footer>
 
 <script src="webjars/jquery/1.9.1/jquery.min.js"></script>
